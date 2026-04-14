@@ -1,0 +1,133 @@
+<!-- TopNavBar Shell -->
+<nav class="nav">
+  <div class="nav__container">
+    <a routerLink="/" class="nav__logo">
+      501 Darts Club
+    </a>
+    
+    <!-- Desktop Navigation -->
+    <div class="nav__links">
+      <a routerLink="/" class="nav-link" routerLinkActive="nav-link--active">Home</a>
+      <a routerLink="/about" class="nav-link" routerLinkActive="nav-link--active">About Us</a>
+      <a routerLink="/contact" class="nav-link" routerLinkActive="nav-link--active">Contact Us</a>
+    </div>
+    
+    <div class="nav__actions">
+      <button class="btn btn--primary">Join Us</button>
+    </div>
+    
+    <!-- Mobile Menu Button -->
+    <button 
+      class="nav__burger" 
+      (click)="toggleMobileMenu()" 
+      [attr.aria-expanded]="isMobileMenuOpen()"
+      [attr.aria-label]="isMobileMenuOpen() ? 'Close menu' : 'Open menu'"
+      type="button"
+    >
+      <span class="nav__burger-line"></span>
+      <span class="nav__burger-line"></span>
+      <span class="nav__burger-line"></span>
+    </button>
+    
+    <!-- Mobile Menu Overlay -->
+    @if (isMobileMenuOpen()) {
+      <div class="nav__mobile-overlay" (click)="closeMobileMenu()"></div>
+    }
+    
+    <!-- Mobile Menu -->
+    <div class="nav__mobile" [class.nav__mobile--open]="isMobileMenuOpen()">
+      <div class="nav__mobile-links">
+        <a routerLink="/" class="nav__mobile-link" routerLinkActive="nav__mobile-link--active" (click)="closeMobileMenu()">Home</a>
+        <a routerLink="/about" class="nav__mobile-link" routerLinkActive="nav__mobile-link--active" (click)="closeMobileMenu()">About Us</a>
+        <a routerLink="/contact" class="nav__mobile-link" routerLinkActive="nav__mobile-link--active" (click)="closeMobileMenu()">Contact Us</a>
+      </div>
+      <div class="nav__mobile-cta">
+        <button class="btn btn--primary">Join Us</button>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- Main Content -->
+<main class="main">
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero__overlay"></div>
+    <div class="hero__content">
+      <h1 class="headline headline--xl">
+        Something <span class="hero__highlight">exciting</span> is coming soon
+      </h1>
+      <p class="hero__subtitle">
+        Become part of the best junior darts club in the South West.
+      </p>
+      <div class="hero__actions">
+        <button class="btn btn--primary btn--xl">Join Us</button>
+        <button class="btn btn--outline btn--xl">Find Out More</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="features">
+    <div class="container">
+      <div class="features__header">
+        <h2 class="headline headline--lg">Why 501 Darts Club?</h2>
+        <div class="features__divider"></div>
+      </div>
+      <p class="features__text">
+        We're building the club we wished existed: transparent, affordable, and genuinely focused on helping every child enjoy their darts journey.
+      </p>
+      <div class="features__grid">
+        <div class="card">
+          <div class="card__icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <h3 class="card__title">Built by Parents</h3>
+          <p class="card__text">A community-first club shaped by its members. No egos, no gatekeeping, just a welcoming group of kids who love darts and want to see each other improve.</p>
+        </div>
+        <div class="card">
+          <div class="card__icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          </div>
+          <h3 class="card__title">Incredible Value</h3>
+          <p class="card__text">Great darts shouldn't cost a fortune. We keep things affordable while making sure every session delivers real value; quality equipment, structured practice, and a great atmosphere.</p>
+        </div>
+        <div class="card">
+          <div class="card__icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></svg>
+          </div>
+          <h3 class="card__title">Your Darts Journey</h3>
+          <p class="card__text">A fun, engaging curriculum designed to take your game forward. Whether you're picking up darts for the first time or sharpening your finish, we'll help you get there.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="cta">
+    <div class="container">
+      <div class="cta__card">
+        <h2 class="headline headline--lg cta__title">Ready to Join?</h2>
+        <p class="cta__subtitle">Start your journey today</p>
+        <div class="cta__actions">
+          <button class="btn btn--primary btn--xl">Join Us Now</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer__container">
+      <div class="footer__brand">
+        <span class="footer__logo">DARTs Academy</span>
+        <span class="footer__copyright">© 2026 501 Darts Club. All rights reserved.</span>
+      </div>
+      <div class="footer__links">
+        <a routerLink="/" class="footer__link">Home</a>
+        <a routerLink="/about" class="footer__link">About</a>
+        <a routerLink="/contact" class="footer__link footer__link--highlight">Contact</a>
+      </div>
+    </div>
+  </footer>
+</main>

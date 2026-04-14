@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;800;900&amp;family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "primary-fixed": "#ff7576",
+              "surface-bright": "#1e2a50",
+              "primary-container": "#ff7576",
+              "on-secondary-container": "#bad1fb",
+              "on-background": "#dfe4ff",
+              "on-primary": "#640010",
+              "on-error": "#450900",
+              "inverse-surface": "#faf8ff",
+              "primary": "#ff8d8c",
+              "tertiary-dim": "#e2ebdf",
+              "on-surface-variant": "#a3aac9",
+              "error-dim": "#d53d18",
+              "inverse-on-surface": "#4d546f",
+              "error": "#ff7351",
+              "secondary-fixed-dim": "#aec5ee",
+              "surface-container-lowest": "#000000",
+              "on-primary-fixed": "#000000",
+              "on-secondary-fixed": "#1d3557",
+              "surface-variant": "#192447",
+              "on-tertiary": "#596158",
+              "on-tertiary-fixed-variant": "#616a61",
+              "on-surface": "#dfe4ff",
+              "secondary-dim": "#aec5ee",
+              "on-secondary": "#31486b",
+              "surface-container": "#0e1835",
+              "outline-variant": "#3f4762",
+              "primary-fixed-dim": "#ff595f",
+              "outline": "#6d7491",
+              "on-tertiary-fixed": "#454d45",
+              "secondary-container": "#30476a",
+              "surface-dim": "#050d25",
+              "error-container": "#b92902",
+              "tertiary": "#f3fcf0",
+              "on-error-container": "#ffd2c8",
+              "surface": "#050d25",
+              "on-primary-container": "#4e000a",
+              "background": "#050d25",
+              "tertiary-fixed": "#f0f9ed",
+              "primary-dim": "#ff7072",
+              "surface-container-high": "#131e3e",
+              "secondary-fixed": "#bbd3fd",
+              "on-secondary-fixed-variant": "#3a5175",
+              "secondary": "#bbd3fd",
+              "inverse-primary": "#bc152d",
+              "tertiary-fixed-dim": "#e2ebdf",
+              "on-tertiary-container": "#505950",
+              "surface-tint": "#ff8d8c",
+              "tertiary-container": "#e5eee2",
+              "surface-container-highest": "#192447",
+              "on-primary-fixed-variant": "#60000f",
+              "surface-container-low": "#09122c"
+            },
+            fontFamily: {
+              "headline": ["Space Grotesk"],
+              "body": ["Be Vietnam Pro"],
+              "label": ["Be Vietnam Pro"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .dartboard-bg {
+            background-image: radial-gradient(circle at center, transparent 0%, transparent 60%, rgba(63, 71, 98, 0.05) 60%, rgba(63, 71, 98, 0.05) 61%, transparent 61%, transparent 75%, rgba(63, 71, 98, 0.05) 75%, rgba(63, 71, 98, 0.05) 76%, transparent 76%);
+        }
+        .hero-gradient {
+            background: linear-gradient(to right, #050d25 30%, transparent 100%);
+        }
+        .text-glow {
+            text-shadow: 0 0 20px rgba(255, 141, 140, 0.4);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body selection:bg-primary selection:text-on-primary">
+<!-- TopNavBar Shell -->
+<nav class="fixed top-0 w-full z-50 bg-[#1e2a50]/80 backdrop-blur-md shadow-[0_20px_40px_rgba(0,0,0,0.4)]">
+<div class="flex justify-between items-center px-8 py-4 max-w-screen-2xl mx-auto">
+<div class="text-2xl font-black italic text-[#E63946] font-headline tracking-tighter uppercase">
+                PULSE ACADEMY
+            </div>
+<div class="hidden md:flex items-center gap-10">
+<a class="font-headline uppercase tracking-tighter font-bold text-[#E63946] border-b-2 border-[#E63946] pb-1" href="#">Programs</a>
+<a class="font-headline uppercase tracking-tighter font-bold text-slate-300 hover:text-white transition-colors" href="#">Schedules</a>
+<a class="font-headline uppercase tracking-tighter font-bold text-slate-300 hover:text-white transition-colors" href="#">Successes</a>
+<a class="font-headline uppercase tracking-tighter font-bold text-slate-300 hover:text-white transition-colors" href="#">Coaches</a>
+</div>
+<div class="flex items-center gap-6">
+<div class="flex gap-4 items-center">
+<span class="material-symbols-outlined text-slate-300 cursor-pointer hover:text-primary transition-colors">notifications</span>
+<span class="material-symbols-outlined text-slate-300 cursor-pointer hover:text-primary transition-colors">account_circle</span>
+</div>
+<button class="bg-primary text-on-primary px-6 py-2 rounded-lg font-headline font-bold uppercase tracking-tight hover:bg-primary-fixed-dim active:scale-95 transition-all hidden sm:block">
+                    Join the Arena
+                </button>
+</div>
+</div>
+</nav>
+<main class="pt-16">
+<!-- Hero Section -->
+<section class="relative min-h-[921px] flex items-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover" data-alt="dramatic wide shot of a focused teenage boy throwing a dart in a modern sports arena with neon red lighting and atmospheric smoke" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAxPH08Dl6dgxZU4weCBGOsoAbwcivS-suNChQrmH_xVGemvUablVHNZ9baFdMPo7aylAjfaxIr5f-nc6fuCDPQfBwDXRdThIlLN0bviREdAqFJRsPw7Q8jDoSZPJALercCPCCA4y8_zwEvoPthFFYA_6E7mJh95X3TNZkviMRwBL2D5IBlzWSHgQ0zpMuYaoEdBiyhm47yWoDahyfEcEP5ISCdoJu7YSJQwPa8TuiUKRSAA6fvPTjwPI9HqPuQKzA-lSqVuLbgEFY"/>
+<div class="absolute inset-0 hero-gradient"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-surface via-transparent to-transparent"></div>
+</div>
+<div class="container mx-auto px-8 relative z-10">
+<div class="max-w-3xl">
+<h1 class="font-headline text-6xl md:text-8xl font-black italic tracking-tighter uppercase leading-[0.9] mb-6">
+                        AIM FOR <br/>
+<span class="text-primary text-glow">GREATNESS</span>
+</h1>
+<p class="text-on-surface-variant text-lg md:text-xl max-w-xl mb-10 leading-relaxed font-medium">
+                        The elite training ground for the next generation of PDC stars. Precision, discipline, and the roar of the crowd start right here.
+                    </p>
+<div class="flex flex-wrap gap-6">
+<button class="bg-primary text-on-primary px-10 py-5 rounded-xl font-headline font-black text-xl uppercase tracking-widest hover:bg-primary-fixed-dim transition-all shadow-[0_10px_30px_rgba(255,141,140,0.3)] active:scale-95">
+                            Join the Arena
+                        </button>
+<button class="group flex items-center gap-3 text-white font-headline font-bold text-lg uppercase tracking-tight hover:text-primary transition-colors">
+<span class="w-12 h-12 flex items-center justify-center border-2 border-primary rounded-full group-hover:bg-primary group-hover:text-on-primary transition-all">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+</span>
+                            Watch Academy Tour
+                        </button>
+</div>
+</div>
+</div>
+<!-- Animated Radial Stat (Design System Custom Component) -->
+<div class="absolute bottom-12 right-12 hidden lg:flex items-center gap-6 bg-surface-container-highest/60 backdrop-blur-xl p-6 rounded-2xl border border-outline-variant/10">
+<div class="relative w-20 h-20">
+<svg class="w-full h-full transform -rotate-90">
+<circle class="text-secondary-container" cx="40" cy="40" fill="transparent" r="34" stroke="currentColor" stroke-width="8"></circle>
+<circle class="text-primary" cx="40" cy="40" fill="transparent" r="34" stroke="currentColor" stroke-dasharray="213.6" stroke-dashoffset="42" stroke-width="8"></circle>
+</svg>
+<div class="absolute inset-0 flex items-center justify-center font-headline font-black text-xl">80%</div>
+</div>
+<div>
+<div class="text-primary font-headline font-black uppercase text-sm tracking-widest">Focus Level</div>
+<div class="text-white text-lg font-bold italic leading-tight">CHAMPIONSHIP<br/>READY</div>
+</div>
+</div>
+</section>
+<!-- Programs Section: Bento Grid -->
+<section class="py-24 dartboard-bg">
+<div class="container mx-auto px-8">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-8">
+<div>
+<h2 class="font-headline text-5xl md:text-7xl font-black italic tracking-tighter uppercase mb-4">THE PATH TO <span class="text-primary">PRO</span></h2>
+<p class="text-on-surface-variant text-lg max-w-lg">From your first throw to tournament finals, we have a structured program for every age and skill level.</p>
+</div>
+<div class="hidden md:block h-px flex-grow mx-12 bg-outline-variant/20 mb-6"></div>
+<a class="text-primary font-headline font-black uppercase tracking-widest flex items-center gap-2 hover:translate-x-2 transition-transform" href="#">
+                        Explore All <span class="material-symbols-outlined">arrow_forward</span>
+</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-8 h-auto">
+<!-- Beginner Card -->
+<div class="md:col-span-7 group relative overflow-hidden rounded-3xl bg-surface-container-high aspect-[16/9] md:aspect-auto">
+<img class="absolute inset-0 w-full h-full object-cover opacity-40 group-hover:scale-105 transition-transform duration-700" data-alt="close up of a colorful dart hitting the outer ring of a board with soft lighting on a child's hand" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCmMKO2jIREp9YKD3bYT5RZ6fByq7lueuKVQF0X-Bvt1Rv_u3eLpwffYK6m7Estb_BncpfV7sTZ6-JvlM5qv0HAMMrluoDMb0niNqhNFs0M_FB43uJiyT0dkUt1Nr0p2QGUzKA4W9qZsEDoasfrYYPmsExxlIisvlIe23dN4VoQF2ZIyz76zaPEP189b5JNHGI19vmnb6sXP-InRE5i0FfDPmF_79iJjQR1zu3xEM5fqCB8d7_5SGZ4DhD_XG-8WdhyzdMrJGNT7Dg"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-highest via-transparent to-transparent"></div>
+<div class="relative h-full flex flex-col justify-end p-10">
+<span class="bg-secondary text-on-secondary px-4 py-1 rounded-full text-xs font-black uppercase tracking-widest mb-4 w-fit">LEVEL 01</span>
+<h3 class="font-headline text-4xl font-black italic uppercase mb-2">Beginner Bullseye</h3>
+<p class="text-on-surface-variant max-w-sm mb-6">Master the stance, grip, and release. Perfect for newcomers aged 8-12.</p>
+<div class="flex gap-4">
+<span class="flex items-center gap-1 text-sm font-bold"><span class="material-symbols-outlined text-primary text-sm">schedule</span> 12 Weeks</span>
+<span class="flex items-center gap-1 text-sm font-bold"><span class="material-symbols-outlined text-primary text-sm">group</span> Max 6/Group</span>
+</div>
+</div>
+</div>
+<!-- Intermediate Card -->
+<div class="md:col-span-5 bg-surface-container-highest p-10 rounded-3xl flex flex-col justify-between border border-white/5 hover:border-primary/20 transition-all">
+<div>
+<span class="bg-primary text-on-primary px-4 py-1 rounded-full text-xs font-black uppercase tracking-widest mb-6 inline-block">LEVEL 02</span>
+<h3 class="font-headline text-3xl font-black italic uppercase mb-4">Intermediate Flight</h3>
+<p class="text-on-surface-variant mb-8">Refining consistency and basic checkout strategy. Introduction to competitive play math.</p>
+</div>
+<ul class="space-y-4 mb-10">
+<li class="flex items-center gap-3 text-sm font-medium"><span class="material-symbols-outlined text-primary">check_circle</span> Professional Mechanics</li>
+<li class="flex items-center gap-3 text-sm font-medium"><span class="material-symbols-outlined text-primary">check_circle</span> Scoring Consistency</li>
+<li class="flex items-center gap-3 text-sm font-medium"><span class="material-symbols-outlined text-primary">check_circle</span> Regional Competitions</li>
+</ul>
+<button class="w-full py-4 border-2 border-primary/30 text-primary font-headline font-bold uppercase tracking-widest rounded-xl hover:bg-primary hover:text-on-primary transition-all">Enroll Now</button>
+</div>
+<!-- Elite Card -->
+<div class="md:col-span-12 group relative overflow-hidden rounded-3xl bg-surface-container-highest h-64 flex items-center">
+<div class="grid md:grid-cols-2 w-full h-full items-center">
+<div class="p-10 z-10">
+<span class="text-primary font-headline font-black uppercase tracking-widest mb-2 block">LEVEL 03 - ELITE SQUAD</span>
+<h3 class="font-headline text-4xl font-black italic uppercase mb-4">Elite Aim</h3>
+<p class="text-on-surface-variant max-w-lg mb-6">Psychological coaching, advanced math, and tour preparation for aspiring professional athletes.</p>
+<button class="bg-white text-surface px-8 py-3 rounded-lg font-headline font-bold uppercase tracking-tight hover:bg-primary transition-colors">Apply for Selection</button>
+</div>
+<div class="hidden md:block relative h-full">
+<img class="absolute inset-0 w-full h-full object-cover grayscale brightness-50" data-alt="high contrast macro shot of a pro-style tungsten dart being held by a young athlete with professional darting shirt" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC2vzgFIm41TWUcZpqxi6z2Z8HIEhIbX3ClxGIf6Sw_BLqG_kHHIhaAXKI4qNGQ8UVcrOjMgfW3L0Ui10THOM_u3dbnYdOLcBGvJH_QLQQag_xHDFvMI-_3_pRr3aSyEFQPVCHUOkbF1_YkBQM4-yMhXqym1pDq56AKeEfCvTSNTbo0aUTJO7RnMhgdMyahS00LSlVfDg51bZS4J_XfC-OGauHfdZ37qp5Nz8iUXs_Oin_J54mxWd6dNJ0rpQsCN2fk9YKKZYQC4Bk"/>
+<div class="absolute inset-0 bg-gradient-to-r from-surface-container-highest to-transparent"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Why Join Section -->
+<section class="py-24 bg-surface-container-low relative overflow-hidden">
+<div class="container mx-auto px-8">
+<div class="text-center mb-20">
+<h2 class="font-headline text-5xl md:text-6xl font-black italic uppercase mb-4">WHY JOIN THE <span class="text-primary">ARENA?</span></h2>
+<div class="w-24 h-1.5 bg-primary mx-auto"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+<div class="text-center group">
+<div class="w-20 h-20 bg-surface-container-highest rounded-2xl flex items-center justify-center mx-auto mb-8 group-hover:bg-primary transition-all group-hover:-rotate-6">
+<span class="material-symbols-outlined text-primary group-hover:text-on-primary text-4xl" style="font-variation-settings: 'FILL' 1;">psychology</span>
+</div>
+<h4 class="font-headline text-2xl font-black italic uppercase mb-4">UNBREAKABLE FOCUS</h4>
+<p class="text-on-surface-variant leading-relaxed">Darts is 90% mental. Our students develop extraordinary concentration skills that translate directly to school and life.</p>
+</div>
+<div class="text-center group">
+<div class="w-20 h-20 bg-surface-container-highest rounded-2xl flex items-center justify-center mx-auto mb-8 group-hover:bg-primary transition-all group-hover:rotate-6">
+<span class="material-symbols-outlined text-primary group-hover:text-on-primary text-4xl" style="font-variation-settings: 'FILL' 1;">military_tech</span>
+</div>
+<h4 class="font-headline text-2xl font-black italic uppercase mb-4">IRON DISCIPLINE</h4>
+<p class="text-on-surface-variant leading-relaxed">Consistency is the key to the bullseye. We teach the value of practice, routine, and respect for the game.</p>
+</div>
+<div class="text-center group">
+<div class="w-20 h-20 bg-surface-container-highest rounded-2xl flex items-center justify-center mx-auto mb-8 group-hover:bg-primary transition-all group-hover:-rotate-6">
+<span class="material-symbols-outlined text-primary group-hover:text-on-primary text-4xl" style="font-variation-settings: 'FILL' 1;">groups</span>
+</div>
+<h4 class="font-headline text-2xl font-black italic uppercase mb-4">TRUE COMMUNITY</h4>
+<p class="text-on-surface-variant leading-relaxed">Join a squad of like-minded players. Support, competition, and lifelong friendships are forged at the oche.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Success Stories Section -->
+<section class="py-24 bg-surface overflow-hidden">
+<div class="container mx-auto px-8">
+<div class="flex items-center gap-6 mb-16">
+<h2 class="font-headline text-5xl md:text-7xl font-black italic uppercase whitespace-nowrap">SUCCESS <span class="text-primary">STORIES</span></h2>
+<div class="h-1 flex-grow bg-gradient-to-r from-primary to-transparent opacity-20"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Story 1 -->
+<div class="bg-surface-container rounded-[2rem] overflow-hidden group border border-outline-variant/10">
+<div class="relative h-80">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="smiling teenage girl holding a silver darts trophy high, wearing a red and navy academy jersey with logo visible" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCAyfV2oSlNb-TTg2Geo1dDIT8gjTOYouWMv8FipFfqpsYq_aA44TGbcE1TUMJv2yHFqqv6jz3ZUuPeYANryFxSq_AxT19FRtjDTgjK5nnRUXgG-md6J9FossxXXNhYB2DHIYKrQlBsh-xtKegvJSEWPs96fjzLIlaZRM5ScEkkmZo4DKWveneBsAHSox2zo_TiY8Uu_hUgXY1K1n5z-N6_tkovJLGE_bD8llvpamjUyaHbyT_JpiHi51CTUx0Z64dTu1rOaYDwcr8"/>
+<div class="absolute top-4 right-4 bg-primary text-on-primary px-4 py-2 rounded-full font-headline font-black text-sm uppercase">CHAMPION</div>
+</div>
+<div class="p-8">
+<h4 class="font-headline text-2xl font-black italic uppercase mb-2">Leo Marks, 14</h4>
+<p class="text-secondary font-bold uppercase tracking-widest text-xs mb-4">Junior Regional Winner</p>
+<p class="text-on-surface-variant italic">"Pulse Academy didn't just teach me how to throw; they taught me how to win. The mental coaching was a game-changer."</p>
+</div>
+</div>
+<!-- Story 2 -->
+<div class="bg-surface-container rounded-[2rem] overflow-hidden group border border-outline-variant/10">
+<div class="relative h-80">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="action photo of a young male darts player with focus during a competition, blurry background of spectators" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJ_9DoaHFmio2-KoDdU_Fs_ZObhF7WBc6BaUnkcNEr6l0QbevJdHEaOCVc8hkWW3INew61OH_8VJf8HZ-PSzAzWNQz8vmZAFume8kpXVhTY2wTNxvnFR9lgEyOOTgnCwgN890ZlMPysxsW5euICm4HgqPnpYIGGOwfn5L6xOo-Rnavsd3hXaSzsqM6dKNDsQSSuOyN7RwW9Yp6cXRbE8PSOv3xHPcc8OPPNUCgAVaPe3l0zmI2Uo68ksOAXVkPCBEvVFkJCW5tUAk"/>
+<div class="absolute top-4 right-4 bg-secondary text-on-secondary px-4 py-2 rounded-full font-headline font-black text-sm uppercase">NINE-DARTER</div>
+</div>
+<div class="p-8">
+<h4 class="font-headline text-2xl font-black italic uppercase mb-2">Sarah Chen, 16</h4>
+<p class="text-secondary font-bold uppercase tracking-widest text-xs mb-4">National Youth Finalist</p>
+<p class="text-on-surface-variant italic">"I went from throwing in my bedroom to playing on a televised stage in under a year. The Elite program is incredible."</p>
+</div>
+</div>
+<!-- Story 3 -->
+<div class="bg-surface-container rounded-[2rem] overflow-hidden group border border-outline-variant/10">
+<div class="relative h-80">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="group of four smiling teenagers in darts academy shirts standing together at an indoor dart arena" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAVYkv8xFFv5dv-TcQa4SUgxE9HcVGPA1CMsq2vbcOtiR9JSu5N5KDvJZ2WOEVnQqIE6-pdyI8VxMl5CJygkDV3yj4LEfbI53U7y_Lt-OiDm5jldGAe5t42MVgRgzSoNdKv-yYRfIy1UHbIcd9LQCL20j1PKvNQqkETcgNHXdWzpzgXLlcJ1RYKt8zXPb7XU9wZ4S3Ec8bRQP2hT8uLR9sk2y4TI_8K8q0XhPm5witajSRxPc57tZAoVemwd06PHrFfUhDUKoPncdQ"/>
+<div class="absolute top-4 right-4 bg-white text-surface px-4 py-2 rounded-full font-headline font-black text-sm uppercase">SQUAD GOALS</div>
+</div>
+<div class="p-8">
+<h4 class="font-headline text-2xl font-black italic uppercase mb-2">The 'A' Team</h4>
+<p class="text-secondary font-bold uppercase tracking-widest text-xs mb-4">Inter-Academy Champions</p>
+<p class="text-on-surface-variant italic">"We won the team trophy this year. The community here is like nowhere else. We push each other to be better every day."</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-20 relative bg-surface-container-highest">
+<div class="container mx-auto px-8 relative z-10">
+<div class="bg-primary rounded-[3rem] p-12 md:p-20 flex flex-col items-center text-center text-on-primary">
+<h2 class="font-headline text-5xl md:text-7xl font-black italic tracking-tighter uppercase mb-6 leading-none">START YOUR JOURNEY <br/> TO THE RED</h2>
+<p class="text-on-primary/80 text-xl font-bold uppercase tracking-widest mb-12">FREE ASSESSMENT SESSIONS EVERY SATURDAY</p>
+<div class="flex flex-col sm:flex-row gap-6 w-full sm:w-auto">
+<button class="bg-on-primary text-primary px-12 py-5 rounded-2xl font-headline font-black text-xl uppercase tracking-widest hover:scale-105 transition-all shadow-xl">
+                            Book Free Trial
+                        </button>
+<button class="border-4 border-on-primary text-on-primary px-12 py-5 rounded-2xl font-headline font-black text-xl uppercase tracking-widest hover:bg-on-primary hover:text-primary transition-all">
+                            Call Admissions
+                        </button>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer Shell -->
+<footer class="bg-[#09122c] w-full border-t border-[#3f4762]/15">
+<div class="flex flex-col md:flex-row justify-between items-center px-12 py-16 gap-8 max-w-screen-2xl mx-auto">
+<div class="flex flex-col gap-4 items-center md:items-start">
+<div class="text-xl font-black text-[#E63946] font-headline uppercase tracking-tighter italic">PULSE ACADEMY</div>
+<div class="font-['Be_Vietnam_Pro'] text-xs uppercase tracking-widest text-slate-500">© 2024 PULSE DARTS ACADEMY. HIT THE RED.</div>
+</div>
+<div class="flex gap-8">
+<a class="font-['Be_Vietnam_Pro'] text-xs uppercase tracking-widest text-slate-500 hover:text-white transition-colors" href="#">Privacy</a>
+<a class="font-['Be_Vietnam_Pro'] text-xs uppercase tracking-widest text-slate-500 hover:text-white transition-colors" href="#">Safety</a>
+<a class="font-['Be_Vietnam_Pro'] text-xs uppercase tracking-widest text-slate-500 hover:text-white transition-colors" href="#">Terms</a>
+<a class="font-['Be_Vietnam_Pro'] text-xs uppercase tracking-widest text-[#E63946] font-bold" href="#">Contact</a>
+</div>
+<div class="flex gap-4">
+<div class="w-10 h-10 rounded-full border border-outline-variant/20 flex items-center justify-center text-on-surface-variant hover:text-primary cursor-pointer hover:border-primary transition-all">
+<span class="material-symbols-outlined text-sm">share</span>
+</div>
+<div class="w-10 h-10 rounded-full border border-outline-variant/20 flex items-center justify-center text-on-surface-variant hover:text-primary cursor-pointer hover:border-primary transition-all">
+<span class="material-symbols-outlined text-sm">public</span>
+</div>
+</div>
+</div>
+</footer>
+</body></html>

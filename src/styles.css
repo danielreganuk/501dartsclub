@@ -1,0 +1,12 @@
+/**
+ * Global Styles Entry Point for Darts Academy
+ * 
+ * Import order matters:
+ * 1. Design tokens (CSS custom properties)
+ * 2. Base styles (reset, typography, layout)
+ * 3. Shared UI elements (buttons, cards, forms)
+ */
+
+@import './styles/tokens.css';
+@import './styles/base.css';
+@import './styles/shared.css';
