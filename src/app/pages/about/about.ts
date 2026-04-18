@@ -8,10 +8,10 @@ import {Meta, Title} from '@angular/platform-browser';
 })
 export class About {
   constructor(private title: Title, private meta: Meta) {
-    this.title.setTitle('About Us | Exeter 501 Darts Club - Junior Darts in Exeter, Devon');
+    this.title.setTitle('About Us | Exeter 501 Darts Club — Junior Darts in Exeter, Devon');
     this.meta.updateTag({
       name: 'description',
-      content: 'Exeter 501 Darts Club is a parent-run junior darts club for 6-18 year olds in Exeter, Devon. We meet every Sunday 11am-1pm at St Thomas Social Club. Sessions just £2.50 — free throughout May 2025.'
+      content: 'Learn about Exeter 501 Darts Club — a parent-run junior darts club for 6–18 year olds in Exeter. Sundays 11am–1pm at St Thomas Social Club. Just £2.50 per session, free throughout May.'
     });
   }
 
