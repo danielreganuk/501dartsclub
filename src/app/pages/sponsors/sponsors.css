@@ -1,0 +1,126 @@
+/* PAGE HERO */
+
+.sponsors-hero {
+  padding: var(--spacing-4xl) 0 var(--spacing-3xl);
+  background-color: var(--colour-surface-container);
+}
+
+.sponsors-hero__content {
+  text-align: center;
+  max-width: 48rem;
+  margin: 0 auto;
+}
+
+.sponsors-hero__lead {
+  font-size: var(--font-size-lg);
+  color: var(--colour-on-surface-variant);
+  line-height: var(--line-height-relaxed);
+  margin-top: var(--spacing-xl);
+  max-width: 40rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* SPONSOR CARD */
+
+.sponsor-card {
+  position: relative;
+  display: grid;
+  background: linear-gradient(145deg, var(--colour-surface-container), var(--colour-surface-container-high));
+  border-radius: var(--radius-3xl);
+  border: 1px solid var(--colour-outline-variant);
+  overflow: hidden;
+  padding: var(--spacing-2xl);
+  gap: var(--spacing-2xl);
+}
+
+@media (min-width: 768px) {
+  .sponsor-card {
+    grid-template-columns: 280px 1fr;
+    padding: var(--spacing-3xl);
+    gap: var(--spacing-3xl);
+  }
+}
+
+.sponsor-card__aside {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .sponsor-card__aside {
+    position: sticky;
+    top: calc(64px + var(--spacing-xl));
+    align-self: start;
+  }
+}
+
+.sponsor-card__badge {
+  margin-bottom: var(--spacing-xl);
+}
+
+.sponsor-card__logo {
+  display: flex;
+  justify-content: center;
+}
+
+.sponsor-card__logo-img {
+  max-width: 200px;
+  width: 100%;
+  height: auto;
+  transition: opacity var(--transition-colors);
+}
+
+@media (min-width: 768px) {
+  .sponsor-card__logo-img { max-width: 240px; }
+}
+
+.sponsor-card__logo a:hover .sponsor-card__logo-img {
+  opacity: 0.8;
+}
+
+.sponsor-card__divider {
+  width: 4rem;
+  height: 0.25rem;
+  background: linear-gradient(90deg, var(--colour-primary), rgba(245, 124, 0, 0.6));
+  border-radius: var(--radius-full);
+  margin: var(--spacing-md) 0 var(--spacing-xl);
+}
+
+.sponsor-card__content p {
+  color: var(--colour-on-surface-variant);
+  line-height: var(--line-height-relaxed);
+  margin-bottom: var(--spacing-lg);
+  font-size: var(--font-size-base);
+}
+
+@media (min-width: 768px) {
+  .sponsor-card__content p { font-size: var(--font-size-lg); }
+}
+
+.sponsor-card__cta {
+  margin-top: var(--spacing-xl);
+}
+
+/* CTA SECTION */
+
+.sponsors-cta__card {
+  text-align: center;
+  max-width: 48rem;
+  margin: 0 auto;
+}
+
+.sponsors-cta__text {
+  font-size: var(--font-size-lg);
+  color: var(--colour-on-surface-variant);
+  line-height: var(--line-height-relaxed);
+  margin: var(--spacing-lg) auto 0;
+  max-width: 36rem;
+}
+
+.sponsors-cta__actions {
+  margin-top: var(--spacing-2xl);
+  display: flex;
+  justify-content: center;
+}
