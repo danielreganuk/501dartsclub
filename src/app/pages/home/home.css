@@ -46,6 +46,16 @@
   }
 }
 
+.hero__br-mobile {
+  display: block;
+}
+
+@media (min-width: 768px) {
+  .hero__br-mobile {
+    display: none;
+  }
+}
+
 .hero__rotator {
   display: inline-grid;
   overflow: hidden;
