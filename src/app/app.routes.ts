@@ -14,6 +14,10 @@ export const routes: Routes = [
     loadComponent: () => import('./pages/sponsors/sponsors').then(m => m.Sponsors)
   },
   {
+    path: 'contact',
+    loadComponent: () => import('./pages/contact/contact').then(m => m.Contact)
+  },
+  {
     path: 'privacy',
     loadComponent: () => import('./pages/privacy/privacy').then(m => m.Privacy)
   },

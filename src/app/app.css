@@ -237,8 +237,14 @@
  * =================================== */
 
 .main {
+  display: flex;
+  flex-direction: column;
   padding-top: 64px;
   min-height: 100vh;
+}
+
+.main .footer {
+  margin-top: auto;
 }
 
 /* ===================================
@@ -286,9 +292,20 @@
   font-size: var(--font-size-lg);
   font-weight: var(--font-weight-black);
   font-style: italic;
-  color: var(--colour-primary);
+  color: #ffffff;
   text-transform: uppercase;
   letter-spacing: var(--letter-spacing-tight);
+}
+
+.footer__logo-accent {
+  color: var(--colour-primary);
+}
+
+.footer__address {
+  font-family: var(--font-family-body);
+  font-size: var(--font-size-xs);
+  color: var(--colour-on-surface-variant);
+  line-height: var(--line-height-normal);
 }
 
 .footer__copyright {
