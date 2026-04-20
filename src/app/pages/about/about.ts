@@ -30,11 +30,11 @@ export class About {
     },
     {
       question: 'Is there parking at the venue?',
-      answer: 'St Thomas Social Club doesn\'t have a car park, but there is ample street parking available nearby.'
+      answer: 'There is ample on-street parking available nearby. There is also a pay and display car park on Old Vicarage Road which accepts RingGo.'
     },
     {
       question: 'Do parents need to stay during sessions?',
-      answer: 'No, parents are welcome to stay, but they are not required to. We have a designated area for parents to watch the sessions.'
+      answer: 'If your child is under 8, a parent or guardian must remain on site for the duration of the session. For children aged 8 and over, parents are welcome to stay but are not required to.'
     },
     {
       question: 'How do I sign my child up?',
