@@ -1,0 +1,82 @@
+<!-- Page Header -->
+<section class="mentors-hero">
+  <div class="mentors-hero__overlay"></div>
+  <div class="container mentors-hero__content">
+    <h1 class="headline headline--xl">Our Mentors</h1>
+    <p class="mentors-hero__lead">
+      The heart of our club. Passionate volunteers who give their time to help young darts players grow, improve, and love the game.
+    </p>
+  </div>
+</section>
+
+<!-- Mentor Carousel -->
+<section class="section mentors-carousel-section">
+  <div class="container">
+    <div
+      class="mentors-carousel"
+      (touchstart)="$any($event).__swipeStartX = $event.touches[0].clientX"
+      (touchend)="onSwipe($any($event).__swipeStartX ?? 0, $event.changedTouches[0].clientX)"
+    >
+      <div class="mentors-carousel__track">
+        @for (slide of visibleSlides(); track slide.mentor.name) {
+          <div
+            class="mentors-carousel__slide"
+            [class.mentors-carousel__slide--active]="slide.position === 0"
+            [class.mentors-carousel__slide--prev]="slide.position === -1"
+            [class.mentors-carousel__slide--next]="slide.position === 1"
+            [class.mentors-carousel__slide--far-prev]="slide.position === -2"
+            [class.mentors-carousel__slide--far-next]="slide.position === 2"
+            (click)="slide.position !== 0 && goTo(activeIndex() + slide.position)"
+          >
+            <div class="mentors-card">
+              <div class="mentors-card__image-wrapper">
+                <img
+                  [src]="slide.mentor.image"
+                  [alt]="slide.mentor.name + ' — Exeter 501 Darts Club mentor'"
+                  class="mentors-card__image"
+                  loading="lazy"
+                />
+              </div>
+            </div>
+          </div>
+        }
+      </div>
+
+      <!-- Navigation arrows -->
+      <button class="mentors-carousel__arrow mentors-carousel__arrow--prev" (click)="prev()" type="button" aria-label="Previous mentor">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+      </button>
+      <button class="mentors-carousel__arrow mentors-carousel__arrow--next" (click)="next()" type="button" aria-label="Next mentor">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 6 15 12 9 18"/></svg>
+      </button>
+    </div>
+
+    <!-- Dot indicators -->
+    <div class="mentors-carousel__dots">
+      @for (mentor of mentors(); track mentor.name; let i = $index) {
+        <button
+          class="mentors-carousel__dot"
+          [class.mentors-carousel__dot--active]="i === activeIndex()"
+          (click)="goTo(i)"
+          type="button"
+          [attr.aria-label]="'Go to ' + mentor.name"
+        ></button>
+      }
+    </div>
+
+    <!-- Active mentor bio -->
+    @if (activeMentor(); as mentor) {
+      <div class="mentors-bio">
+        <h2 class="mentors-bio__name">{{ mentor.name }}</h2>
+        <span class="mentors-bio__position">{{ mentor.position }}</span>
+        @if (mentor.bio) {
+          <p class="mentors-bio__text">{{ mentor.bio }}</p>
+        }
+        <div class="mentors-bio__detail">
+          <span class="mentors-bio__label">Favourite Player</span>
+          <span class="mentors-bio__value">{{ mentor.favouritePlayer }}</span>
+        </div>
+      </div>
+    }
+  </div>
+</section>
